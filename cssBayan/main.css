@@ -1,0 +1,79 @@
+* {
+margin: 0;
+padding: 0;
+}
+main {
+    margin: 0 auto;
+    padding: 5%;
+    color: rgb(17, 17, 20);
+    background-color: rgb(138, 165, 165);
+    max-width:90vw;
+    min-width: 80vw;;
+    min-height: 100vh;
+    /* font-size: 0.75 rem; */
+}
+@media screen and (min-width: 420px) {
+    p {
+        font-size: 1 rem;
+    }
+}
+@media screen and (min-width: 820px) {
+    p {
+        font-size: 1.25 rem;
+    }
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+} 
+.wrapper {
+    overflow: hidden; 
+}
+.meme-item {
+    margin-bottom: 2px;
+    padding: 5px;
+    border-top: 1px solid  blue;
+    
+}
+.meme-item-label {
+    display: flex;
+    cursor: pointer;
+    color: blue;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+p {
+    font-size: 0.875rem;
+}
+.label-icon  img{
+    opacity: 0;
+}
+.meme-item-content {
+    max-width: 50vw;
+    max-height: 0;
+    display: none;
+    color: black;
+    transition: 0.8;
+}
+.meme-item-input:checked ~ label .label-icon img{
+    opacity: 0.9;
+    transform: rotate(45deg);
+}
+.meme-item-input:hover ~ label .label-icon img{
+    opacity: 0.9;
+}
+.meme-item-input:hover ~ .meme-item-content {
+    max-height: max-content;
+    display: block; 
+    margin: 0 auto;
+}
+.meme-item-input:checked ~ .meme-item-content {
+    max-height: max-content;
+    display: block; 
+    color: black;
+    margin: 0 auto;
+}
+
